@@ -1,0 +1,71 @@
+<template>
+    <lightning-card>
+
+        <div class="slds-m-around_medium">
+            {message} <br>
+
+            Student Name : {student.name} <br>
+            Department : {student.department} <br>
+
+            course Name : {courseName} <br>
+
+            <lightning-input type="text" variant="standard" name="txtmessage" label="Enter your message"
+                onchange={handleChange}>
+            </lightning-input> <br>
+
+            <lightning-input type="text" variant="standard" name="FirstName" label="First Name"
+                placeholder="Enter Fname" onchange={handelName}></lightning-input>
+
+            <lightning-button variant="brand" label="Press Here" onclick={handleClick}></lightning-button> <br><br>
+            <h1>Template looping</h1>
+            <template for:each={courses} for:item="course">
+                <div key={course} data-value={course}>
+                    {course} <br>
+
+                </div>
+
+
+            </template><br>
+
+            <lightning-input type="text" variant="standard" name="courseinput" label="courseinput"
+                onchange={handleCourse}></lightning-input> <br>
+
+            <lightning-button variant="brand" label="Submit Course" title="Submit Course" onclick={handleInput}>
+            </lightning-button> <br><br>
+
+            <!-- Conditional Rendering -->
+
+            <h1>Conditional Rendering</h1><br>
+            <h2>Working Employees</h2>
+
+            <template for:each={Employees} for:item="Employee">
+                <template if:true={Employee.isworking}>
+                    <div key={Employee.Name}>
+                        
+                        <ul>
+                            <li>{Employee.Name}</li>
+                        </ul>
+                    </div>
+
+                </template>
+            </template>
+
+            <h2>Non-Working Employees</h2>
+
+            <template for:each={Employees} for:item="Employee">
+                <template if:false={Employee.isworking}>
+                    <div key={Employee.Name}>
+                        
+                        <ul>
+                            <li>{Employee.Name}</li>
+                        </ul>
+                    </div>
+                </template>
+
+            </template>
+
+
+
+        </div>
+    </lightning-card>
+</template>

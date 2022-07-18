@@ -1,0 +1,21 @@
+<template>
+    <lightning-card  variant="Narrow"  title="DataTable with Custom Picklist_D27" icon-name="standard:account">
+         <c-custom-datatable-cmp-d26
+         key-field="Id"
+         data={cases}
+         columns={columnsList}
+         show-row-number-column>
+
+         </c-custom-datatable-cmp-d26>
+         <!-- <lightning-datatable
+            key-field="id"
+            data={dataList}
+            show-row-number-column
+            row-number-offset={rowOffset}
+            hide-checkbox-column
+            columns={columnsList}
+            onrowaction={handleRowAction}>
+         </lightning-datatable> -->
+        <p slot="footer">Card Footer</p>
+    </lightning-card>
+</template>

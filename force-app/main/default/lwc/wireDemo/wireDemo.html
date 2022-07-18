@@ -1,0 +1,16 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Wire Demo Accounts" icon-name="standard:account">
+     <div class="slds-m-around_medium">
+            <!-- //if accounts variable has data then only run next code -->
+      <template if:true={Accounts.data}>   
+            <!-- //looping through all the received accounts records -->
+       <template for:each={Accounts.data} for:item = "Account">   
+         <div key = {Account.Id}>
+          {Account.Name} <br>
+         </div>
+       </template>
+      </template>
+     </div>
+    </lightning-card>
+    
+</template>

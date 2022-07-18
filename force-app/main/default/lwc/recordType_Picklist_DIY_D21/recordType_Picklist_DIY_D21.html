@@ -1,0 +1,30 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Dependant Picklist values controlled by RecordTypes DIY_D21" icon-name="standard:account">
+
+        <div class="slds-var-m-around_medium">
+            <template if:true={recordTypeIdOptions}>
+                <lightning-combobox
+                name="Record Types"
+                label="Record Types"
+                value={value}
+                placeholder="Select RecordType"
+                options={recordTypeIdOptions}
+                onchange={handleChange} ></lightning-combobox>
+            </template>
+            
+                <br>
+                <template if:true={picklistValuesOptions}>
+                    <lightning-combobox
+                    name="Industry"
+                    label="Industry"
+                    value={value}
+                    options={picklistValuesOptions}
+                     ></lightning-combobox> 
+                </template>
+            
+
+        </div>
+        <p slot="footer"> first got all the 3 record type ids by using getObjectInfo and used same ids to get picklist values for Industry by pasing the record ids to getPicklistValues</p>
+    </lightning-card>
+    
+</template>

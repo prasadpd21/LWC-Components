@@ -1,0 +1,22 @@
+<template>
+    <lightning-card  variant="Narrow"  title="LWC Flow Screen_D32" icon-name="standard:account">
+     <div class="slds-var-m-around_medium">
+        <template if:true={isGridVisible}>
+            <lightning-button variant="success" label="Get Accounts" onclick={handleClick}></lightning-button>
+            &nbsp;&nbsp;
+            <lightning-button variant="brand" label="Next Screen" onclick={handleClickNext}></lightning-button>
+
+          <template if:true={accList}>
+            <lightning-datatable
+             key-field="Id"
+             data={accList} 
+             show-row-number-column
+             hide-checkbox-column
+             columns={columnsList}>
+            </lightning-datatable> 
+          </template>
+        </template>
+      
+     </div>
+    </lightning-card>
+</template>

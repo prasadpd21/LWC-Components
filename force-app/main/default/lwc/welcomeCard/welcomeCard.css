@@ -1,0 +1,14 @@
+@import 'c/cssLibrary';
+
+
+.red{
+    color: red;
+}
+
+.blue{
+    color: blue;
+}
+
+.black{
+    color: black;
+}

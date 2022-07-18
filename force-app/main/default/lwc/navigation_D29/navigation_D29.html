@@ -1,0 +1,46 @@
+<template>
+    <lightning-card variant="Narrow" title="Navigation To Different Pages_D29" icon-name="custom:custom64">
+        <div class="slds-grid slds-gutters slds-var-m-around_medium">
+            <div class="slds-col">
+                <lightning-button variant="brand" label="Navigate To Home" onclick={navigateToHome}
+                    class="slds-var-m-around_medium"></lightning-button><br>
+                <lightning-button variant="brand" label="Navigate To Account Page" onclick={navigateToObjectHome}
+                    class="slds-var-m-around_medium">
+                </lightning-button><br>
+                <lightning-button variant="brand" label="Navigate To Account Creation" onclick={navigateToNewRecordPage}
+                    class="slds-var-m-around_medium"></lightning-button><br>
+                <lightning-button variant="brand" label="Contact Creation with Default Values"
+                    onclick={navigateToNewRecordPageDefaultVals} class="slds-var-m-around_medium"></lightning-button>
+                <br>
+                <lightning-button variant="brand" label="Navigate To WebPage" onclick={navigateToWebPage}
+                    class="slds-var-m-around_medium"></lightning-button><br>
+
+            </div>
+            <div class="slds-col">
+                <lightning-button variant="brand" label="Navigate To Record-Page" onclick={navigateToRecordViewPage}>
+                </lightning-button><br>
+                <lightning-button variant="brand" label="Navigate To Contact List View" onclick={navigateToListView}>
+                </lightning-button><br>
+
+                <lightning-button variant="brand" label="Navigate To Tab" onclick={navigateToTab}>
+                </lightning-button><br>
+                <lightning-button variant="brand" label="Navigate To Related Records" onclick={navigateToRelatedList}>
+                </lightning-button><br>
+                <lightning-button variant="brand" label="Navigate To LWC" onclick={navigateToLWC}>
+                </lightning-button><br>
+            </div>
+        </div>
+        <div class="slds-var-m-around_medium">
+            <div>
+                <a href={url} onclick={handleClick}>Account Home</a>
+            </div>
+            <div>
+                <p> Current Page Reference: {pageReference}</p>
+            </div>
+        </div>
+        <p slot="footer">Use the navigation service, lightning/navigation, to navigate to many different page types,
+            like records, list views, and objects.Instead of a URL, the navigation service uses a PageReference. A
+            PageReference is a JavaScript object that describes the page type, its attributes, and the state of the page
+        </p>
+    </lightning-card>
+</template>

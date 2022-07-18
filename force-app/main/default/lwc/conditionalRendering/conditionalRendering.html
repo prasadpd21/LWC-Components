@@ -1,0 +1,20 @@
+<template>
+    <lightning-card variant="Narrow" title="Conditional Rendering" icon-name="standard:account">
+        <div class="slds-m-around_small">
+            <lightning-input type="text" variant="standard" name="Stock" label="Stock" onchange={handleChange}>
+            </lightning-input><br>
+            <lightning-input type="checkbox" variant="standard" name="Show details" label="Show details"
+                onchange={handleCheck}></lightning-input><br>
+
+            <template if:true={areDetailsVisible}>
+                <template if:true={isZero}>
+                    Out Of Stock!
+                </template>
+                <template if:false={isZero}>
+                    {product.stock}
+                </template>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

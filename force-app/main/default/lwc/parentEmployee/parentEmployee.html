@@ -1,0 +1,18 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Parent-Child Employee" icon-name="standard:account">
+      <div class="slds-m-around_medium">
+         Selected Employee <br>
+          Name : {selectedName} <br>
+          Position: {selectedPosition}
+          
+          <c-child-employee employeefromparent={Employees} onselectbuttonclick={handleclickfromchild}>
+           <template for:each={Employees} for:item="Employee">
+             <div key ={employee.Code}>
+              {Employee}
+             </div>
+
+           </template>
+          </c-child-employee>
+      </div>
+    </lightning-card>
+</template>

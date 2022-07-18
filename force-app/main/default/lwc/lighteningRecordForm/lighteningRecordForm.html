@@ -1,0 +1,37 @@
+<!-- Day 17  -->
+<template>
+    <lightning-card variant="Narrow" title="Lightening Record Form-CREATE" icon-name="standard:account">
+
+        <lightning-record-form object-api-name={objectApiName} fields={fields} onsuccess={handleSuccess}>
+        </lightning-record-form>
+
+    </lightning-card>
+    <lightning-card variant="Narrow" title="EDIT" icon-name="standard:account">
+
+        <lightning-record-form object-api-name={objectApiName} fields={fields} onsuccess={handleSuccess} mode="edit"
+            record-id="0015j00000fkLbPAAU">
+        </lightning-record-form>
+
+    </lightning-card>
+    <lightning-card variant="Narrow" title="VIEW" icon-name="standard:account">
+
+        <lightning-record-form object-api-name={objectApiName} fields={fields} onsuccess={handleSuccess}
+            record-id="0015j00000fkLbPAAU" mode="view">
+        </lightning-record-form>
+
+    </lightning-card>
+    <lightning-card variant="Narrow" title="READ-ONLY" icon-name="standard:account">
+
+        <lightning-record-form object-api-name={objectApiName} fields={fields} onsuccess={handleSuccess}
+            record-id="0015j00000fkLbPAAU" mode="readonly">
+        </lightning-record-form>
+        <p slot="footer">Use the lightning-record-form component to quickly create forms to add, view, or update a
+            record.
+            However, lightning-record-form is less customizable. To customize the form layout or provide custom
+            rendering of record data, use lightning-record-edit-form (add or update a record) and
+            lightning-record-view-form.
+            It will take care of the error or exception without an error handler
+        </p>
+
+    </lightning-card>
+</template>

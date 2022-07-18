@@ -1,0 +1,19 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Imperative Demo" icon-name="standard:account">
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" variant="standard" name="Enter the Amount" label="Enter the Amount"></lightning-input><br>
+
+            <template for:each={OpportunityRecords} for:item="Opps">
+                <div key = {Opps.Id} data-value={Opps}>
+                  {Opps}
+                </div>
+             </template>
+
+
+             <lightning-button variant="brand" label="Get opportunity" title="Get opportunity" onclick={handleClick}>
+
+                
+             </lightning-button>
+        </div>
+    </lightning-card>
+</template>

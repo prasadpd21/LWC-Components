@@ -1,0 +1,60 @@
+.introimage
+{
+    background-image: url(https://picsum.photos/seed/picsum/400/300);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    text-align: center;
+    font-size: 14px;
+    font-family: cursive;
+    font-weight: bold;
+    padding: 90px;
+    margin: auto;
+    
+}
+
+.profileimage1
+{
+    font-size: 14px;
+    font-family: cursive;
+    font-weight: bold;
+    padding: 10px;
+    margin: 5px;
+    background-position: center;
+    text-align: center;
+}
+
+.profileimage2
+{
+    font-size: 14px;
+    font-family: cursive;
+    font-weight: bold;
+    padding: 10px;
+    margin: 5px;
+    background-position: center;
+    text-align: center;
+    
+}
+
+.header
+{
+    font-family: 'helvetica neue', helvetica, sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid rgba(0,0,200,0.6);
+  background: rgba(0,0,200,0.3);
+  color: rgba(0,0,200,0.6);
+  box-shadow: 1px 1px 2px rgba(0,0,200,0.4);
+  border-radius: 10px;
+  padding: 3px 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.imageclass1
+{
+    padding: 10px;
+    margin: 5px;
+    background-position: center;
+}

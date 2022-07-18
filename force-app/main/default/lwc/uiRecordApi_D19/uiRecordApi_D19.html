@@ -1,0 +1,44 @@
+<template>
+    <lightning-card variant="Narrow" title="Get Record Using uiRecordApi_D19" icon-name="standard:account">
+        <div class="slds-var-m-around_medium">
+            <!-- We are using conditional rendering coz when the component first loads the Account record may not be available to display in the template and it will give error so when the data is availbale then only the data is shown -->
+
+            <template if:true={accountRecord}>
+                <p>
+                    Name: {accountRecord.Name.value}
+                </p>
+                <p>
+                    Phone: {accountRecord.Phone.value}
+                </p>
+                <p>
+                    Contacts: {accountRecord.Count_Of_Contacts__c.value}
+                </p>
+                <p>
+                    Industry: {accountRecord.Industry.value}
+                </p>
+
+
+            </template>
+
+            <!-- <template if:true={userRecord}>
+                <p>
+                    Logged In User:{userRecord.Name.value}
+                </p>
+
+            </template> -->
+            <template if:true={errorMessage}>
+                <p style="color: red;">
+                    {errorMessage}
+                </p>
+
+            </template>
+
+
+        </div>
+
+        <p slot="footer">getRecord wire adapter is used to get record data using LDS
+            
+        </p>
+    </lightning-card>
+
+</template>

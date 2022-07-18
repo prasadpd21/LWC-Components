@@ -1,0 +1,10 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Reactive Demo" icon-name="standard:account">
+       <div class="slds-m-around_small">
+          <lightning-input type="text" variant="standard" name="Fname" label="Fname" onchange={handleChange}></lightning-input> <br>
+          <lightning-input type="text" variant="standard" name="Lname" label="Lname" onchange={handleChange}></lightning-input> <br>
+
+          UPPERCASE NAME :: {Fname} {Lname}
+       </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,16 @@
+<template>
+    <lightning-card  variant="Narrow">
+        <div class="slds-m-around_medium">
+            This is the Parent-Component <br>
+            <p style="color: brown;">{fromchild}</p>
+        </div>
+
+       <!-- Embedding child component into this parent component -->
+       <!-- <c-childcomponentname(in smallcase/if original name has capital letters replace it with '-' and smallcase letter) -->
+      <!-- the property name has to be in smallcase in below case messagereceiver is in small case -->
+        <c-child-demo messagereceiver={message} onbuttonclick={handleclickfromchild}>
+            
+        </c-child-demo>
+
+    </lightning-card>
+</template>

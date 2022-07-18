@@ -1,0 +1,13 @@
+:host{
+    --slds-c-button-radius-border:.0.5rem;
+    --slds-c-button-brand-color-border:rgb(234, 220, 22);
+    --slds-c-button-brand-color-background:rgb(32, 225, 243);
+ 
+}
+
+.slds-button{
+    padding: 5px;
+}
+/* div:hover{
+    background: #fdd;
+} */

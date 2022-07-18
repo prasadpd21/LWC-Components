@@ -1,0 +1,17 @@
+<!-- This Meta file needs to be deployed first -->
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+   <masterLabel>MyMessageChannel</masterLabel>
+   <isExposed>true</isExposed>
+   <description>This Lightning Message Channel sends information from VF to LWC</description>
+
+   <lightningMessageFields>
+       <fieldName>lmsData</fieldName>
+       <description>Field used to pass data</description>
+   </lightningMessageFields>
+   <lightningMessageFields>
+    <fieldName>ratingValue</fieldName>
+    <description>Field used get account records</description>
+</lightningMessageFields>
+
+</LightningMessageChannel>

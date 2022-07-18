@@ -1,0 +1,22 @@
+<template>
+    <lightning-card  variant="Narrow"  title="DataTable-Custom Column" icon-name="standard:event">
+         <div class="slds-var-m-around_medium">
+          <!-- below child custom component is acting as a datatable as it extends the datatable  -->
+           <c-custom-datatable-cmp-d26 
+           key-field="Id" 
+           data={dataList} 
+           columns={columnsList} >
+          </c-custom-datatable-cmp-d26>
+           <!-- <lightning-datatable
+            key-field="id"
+            data={dataList}
+            show-row-number-column
+            row-number-offset={rowOffset}
+            hide-checkbox-column
+            columns={columnsList}
+            onrowaction={handleRowAction}>
+           </lightning-datatable> -->
+         </div>
+        <p slot="footer">datatable is extended in the child component and included in parent so it will act as datatable and we can customize the columns</p>
+    </lightning-card>
+</template>

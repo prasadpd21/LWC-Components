@@ -1,0 +1,39 @@
+<!-- Day 18 -->
+<template>
+    <lightning-card variant="Narrow" title="Lightning Record EDIT Form" icon-name="standard:account">
+        <div class="slds-var-m-around_medium">
+            <lightning-record-edit-form object-api-name={objectApiName}
+            onsubmit={submitHandler}
+            onsuccess={successHandler}
+            onerror={errorHandler}>
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-size_6-of-12">
+                        <lightning-input-field field-name={fields.name}></lightning-input-field>
+                        <lightning-input-field field-name={fields.industry}></lightning-input-field>
+                        <lightning-input-field field-name={fields.revenue} data-id="amt"></lightning-input-field>
+
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <lightning-input-field field-name={fields.type}></lightning-input-field>
+                        <lightning-input-field field-name={fields.isActive}></lightning-input-field>
+                        <lightning-input-field field-name={fields.sla}></lightning-input-field>
+                    </div>
+
+                </div>
+                <br>
+                <div>
+                    <lightning-button variant="brand" label="Submit" type="submit"></lightning-button>
+                    &nbsp;&nbsp;
+                    <lightning-button variant="destructive" label="Reset" type="reset"></lightning-button>
+                </div>
+
+            </lightning-record-edit-form>
+
+        </div>
+
+        <p slot="footer">Use the lightning-record-edit-form component to create a form that's used to add a Salesforce
+            record or update fields in an existing record on an object. The component displays fields with their labels
+            and the current values, and enables you to edit their values.</p>
+    </lightning-card>
+
+</template>

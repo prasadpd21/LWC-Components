@@ -1,0 +1,19 @@
+<template>
+    <lightning-card  variant="Narrow"  title="LMS_Subscriber_D27" icon-name="standard:account">
+          <div class="slds-var-m-around_medium">
+            <p>{receivedData}</p>
+            <p>{receivedRatingData}</p>
+            <br>
+            <div>
+              <lightning-datatable
+                key-field="Id"
+                data={accList}
+                show-row-number-column
+                hide-checkbox-column
+                columns={columnsList}>
+              </lightning-datatable> 
+            </div>
+          </div>
+        <p slot="footer">Card Footer</p>
+    </lightning-card>
+</template>

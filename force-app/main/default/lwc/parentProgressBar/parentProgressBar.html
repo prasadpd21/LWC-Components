@@ -1,0 +1,14 @@
+<template>
+    <lightning-card variant="Narrow" title="P-C" icon-name="standard:account">
+        <!-- the event get bubbled to below parent div from child as bubbling is true -->
+        <div class="slds-var-m-around_medium" style="width:500px;" onfinish={onbubble}>
+            <div >
+                <lightning-button variant="brand" label="Start" onclick={handleClick}></lightning-button>
+            </div>
+            <br>
+            <c-clild-progress-bar onfinish={onfinish} personinfo={person}></c-clild-progress-bar>
+            <br>
+        </div>
+
+    </lightning-card>
+</template>

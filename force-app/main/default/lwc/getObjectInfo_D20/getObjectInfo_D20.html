@@ -1,0 +1,28 @@
+<template>
+    <lightning-card variant="Narrow" title="getObjectInfo_D20" icon-name="standard:account">
+        <div class="slds-var-m-around_medium">
+            <template if:true={objectInfo}>
+                <p>Object Api Name : {objectInfo.apiName}</p> 
+                <p>totalObjectFields : {totalObjectFields}</p>
+                <p>totalCustomFields : {totalCustomFields}</p>
+                <p>totalPickListFields : {totalPickListFields}</p>
+                <p>totalRecordTypes : {totalRecordTypes}</p>
+
+            </template>
+            <template if:true={apiArray}>
+                <template for:each={apiArray} for:item="apiName">
+                    <div key={apiName}>
+                        {apiName}
+
+                    </div>
+
+                </template>
+
+            </template>
+
+        </div>
+
+        <p slot="footer">Use this wire adapter to get metadata about a specific object. The response includes metadata
+            describing the object’s fields, child relationships, record type, and theme.</p>
+    </lightning-card>
+</template>

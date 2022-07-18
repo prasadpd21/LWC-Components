@@ -1,0 +1,25 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card  variant="Narrow"  title="Datatable-2[Multiple Row Actions & Inline_Edit & refreshApex_D25]" icon-name="standard:branch_merge">
+        <div class="slds-var-m-around_medium">
+            <lightning-datatable
+               key-field="Id"
+               data={accList}
+               show-row-number-column
+               max-row-selection="3"
+               columns={columnsList}
+               onrowaction={handleRowAction}
+               onrowselection={handleRowSelection}
+               onsave={handleSave}
+               draft-values={saveDraftValues}>
+            </lightning-datatable>
+            <br>
+            <br>
+            <lightning-button variant="brand" label="Find Selected Rows" onclick={handleClick}></lightning-button>
+           </div>
+        <p slot="footer">A data table with inline edit enabled, simulating server requests.
+            updateRecord uiRecordApi call to update the edited records onSave click.
+            Key Ponts: Creating recordInput for updateRecord
+        </p>
+    </lightning-card>
+</template>

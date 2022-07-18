@@ -1,0 +1,26 @@
+<aura:component implements="flexiPage:availableForallPageTypes" access="global">
+    <!-- Declaring an attribute -->
+    <aura:attribute name="receivedMessage" type="String"></aura:attribute>
+    <aura:attribute name="messageToPublish" type="String"></aura:attribute>
+
+    <!-- Subscribe Method -->
+    <lightning:messageChannel type="SimpleMessagingChannel__c" scope="APPLICATION" onMessage="{!c.handleMessage}"
+        aura:id="SimpleMessagingChannel">
+    </lightning:messageChannel>
+
+    <lightning:card title="AURA LMS D28">
+        <div class="slds-var-m-around_medium">
+            <p>Received Message From Publisher ==> {!v.receivedMessage}</p>
+
+            <div>
+                <lightning:input type="text" onchange="{!c.handleChange}" aura:id="txtMessage">
+                </lightning:input>
+                <br></br>
+                <lightning:button variant="brand" label="Publish to LWC" onclick="{!c.handlePublish}">
+                </lightning:button>
+            </div>
+
+        </div>
+
+    </lightning:card>
+</aura:component>

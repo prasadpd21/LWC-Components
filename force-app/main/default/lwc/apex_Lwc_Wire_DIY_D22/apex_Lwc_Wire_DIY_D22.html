@@ -1,0 +1,32 @@
+<template>
+    <lightning-card variant="Narrow" title="Data Connectivity in LWC using Apex Class/Method (@Wire) D22"
+        icon-name="standard:account">
+        <div class="slds-var-m-around_medium">
+            <lightning-combobox name="Rating" label="Rating" value={ratingValue} placeholder="Select Rating"
+                options={options} onchange={handleChange}></lightning-combobox>
+
+            <br>
+
+            <div>
+                <template if:true={accountRecords}>
+                    <p>Account Details:-</p>
+                    <br>
+                    <template for:each={accountRecords} for:item="account">
+                        <div key={account.id} class="slds-box">
+                            <p>account-Name: {account.Name}</p>
+                            <p>account-Rating: {account.Rating}</p>
+                            <p>account-Revenue:{account.AnnualRevenue}</p>
+
+                        </div>
+
+                    </template>
+
+                </template>
+            </div>
+
+        </div>
+
+        <p slot="footer">Card Footer</p>
+    </lightning-card>
+
+</template>

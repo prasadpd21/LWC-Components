@@ -1,0 +1,87 @@
+
+.pwithegreen {
+
+    background-color: coral;
+    color: black;
+    border: 3px solid grey;
+    border-radius: 2mm;
+    text-align: justify;
+    font-size: 14px;
+    font-weight: bold !important;
+    width: 95%;
+    margin: auto;
+    
+}
+
+h1 {
+        background-color: aqua;
+        color: black;
+        border: 1px transparent grey;
+        border-radius: 1mm;
+        font-size: 10px;
+        font-weight: bold !important;
+        text-align: center;
+        width:50%;
+        margin: auto;
+}
+
+.c1{
+    background-color: white;
+    color: black;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 3mm;
+    border-inline-width: thick;
+    font-size: 14px;
+    margin: auto;
+    width: 75%;
+    padding: 3%;
+
+}
+
+.c2{
+    background-color: white;
+    color: black;
+    text-align: right;
+    border: 2px solid black;
+    border-radius: 3mm;
+    border-inline-width: thick;
+    font-size: 14px;
+    margin: auto;
+    width: 75%;
+    padding: 3%;
+    
+}
+
+.c3{
+    background-color: green;
+    color: white;
+    border: 2px solid black;
+    border-radius: 3mm;
+    border-inline-width: thick;
+    text-align: center;
+    font-size: 14px;
+    margin: auto;
+    width: 75%;
+    padding: 3%;
+}
+div{
+    background-color: whitesmoke;
+    color: black;
+    border: 2.5px solid skyblue;
+    border-radius: 2mm;
+    text-align: justify;
+}
+
+.divwithimage
+{
+    width: 80%;
+    float: none;
+    margin: auto;
+    text-align: justify;
+    background-image: url(https://picsum.photos/seed/picsum/200/300);
+    border: 2px solid;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5px;
+}

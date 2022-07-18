@@ -1,0 +1,15 @@
+/* Using styling hooks */
+/* custom property */
+
+:host{
+    --slds-c-button-brand-color-background:#ae2cae;
+    --my-padding:15px;
+    --my-margin:10px;
+    
+
+}
+
+div{
+    padding: var(--my-padding);
+    margin: var(--my-margin);
+}

@@ -1,0 +1,14 @@
+<template>
+    <lightning-card  variant="Narrow">
+      <div class="slds-m-around_medium">
+          
+            <div key={employee.Code}>
+               Name : {employee.Name}
+               Position : {employee.Position}
+               Salary : {employee.Salary} 
+               <lightning-button variant="brand" name= {employee} label="Select" onclick={handleClick}></lightning-button>
+            </div>
+         
+      </div>
+    </lightning-card>
+</template>

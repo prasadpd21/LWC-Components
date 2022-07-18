@@ -1,0 +1,17 @@
+<template>
+    <lightning-card  variant="Narrow"  title="uiRecordApi getFields_D20" icon-name="standard:account">
+
+        <div class="slds-var-m-around_medium">
+            <template if:true={ContactRecord}>
+                <p>
+                    Name :{ContactRecord.fields.Name.value}
+                </p>
+                <p>
+                    Account Name :{ContactRecord.fields.Account.value.fields.Name.value}
+                </p>
+            </template>
+
+        </div>
+        <p slot="footer">Card Footer</p>
+    </lightning-card>
+</template>

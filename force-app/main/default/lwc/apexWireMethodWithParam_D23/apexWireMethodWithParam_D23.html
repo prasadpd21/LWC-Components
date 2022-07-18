@@ -1,0 +1,21 @@
+<template>
+    <lightning-card variant="Narrow" title="Search Account Record - @wire Apex call_D23" icon-name="custom:custom63">
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="search" onchange={handleKeyChange} class="slds-var-m-bottom_small" label="Search"
+                value={searchKey}></lightning-input>
+            <div class="slds-box">
+                <template if:true={accounts.data}>
+                 <lightning-datatable
+                    key-field="Id"
+                    data={accounts.data}
+                    show-row-number-column
+                    hide-checkbox-column
+                    columns={columnsList}>
+                 </lightning-datatable>
+                </template>
+
+            </div>
+        </div>
+        <p slot="footer"> read Salesforce data, Lightning web components use a reactive wire service. Use @wire in a component’s JavaScript class to specify an Apex method. You can @wire a property or a function to receive the data. To operate on the returned data, @wire a function.</p>
+    </lightning-card>
+</template>

@@ -1,0 +1,36 @@
+<template>
+    <lightning-card variant="Narrow" title="Get Picklist Values Using getPicklistValues_D21" icon-name="standard:account">
+
+
+        <div class="slds-var-m-around_medium">
+            <div>
+                recordTypeId : {recordTypeId}
+            </div>
+            <template if:true={options}>
+                <lightning-combobox name="progress" label="Industry" value={value} placeholder="Select Industry"
+                    options={options} onchange={handleChange}></lightning-combobox>
+                    <br>
+                <p>Selected value is: {value}</p>
+
+
+            </template>
+            <template if:true={noOfPicklistFields}>
+
+                <p>No Of Picklist Fields available : {noOfPicklistFields}</p>
+            </template>
+            <br>
+            <template if:true={pickListApiNames}>
+                <template for:each={pickListApiNames} for:item="ApiNames">
+                    <div key={ApiNames}>
+                        {ApiNames}
+
+                    </div>
+                </template>
+            </template>
+
+        </div>
+        <p slot="footer">Use this wire adapter to get the picklist values for a specified field.
+
+        </p>
+    </lightning-card>
+</template>

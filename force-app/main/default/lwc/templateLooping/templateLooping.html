@@ -1,0 +1,32 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Template Looping" icon-name="standard:account">
+      <div class="slds-m-around_small">
+        <lightning-input type="number" variant="standard" name="Salary" label="Salary" onchange={handleChange}></lightning-input><br>
+        <template if:true={showDetails}>
+           <template for:each={newEmpArray} for:item="Emp">
+             <div key={Emp.Id}>
+              <table class="table">
+                <thead>
+                  <tr>
+                    
+                    <th scope="col">Name</th>
+                    <th scope="col">role</th>
+                    <th scope="col">salary</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                   
+                    <td>{Emp.name}</td>
+                    <td>{Emp.role}</td>
+                    <td>{Emp.salary}</td>
+                  </tr>
+                </tbody>
+              </table>
+             </div>
+           </template>
+        </template>
+        
+      </div>
+    </lightning-card>
+</template>

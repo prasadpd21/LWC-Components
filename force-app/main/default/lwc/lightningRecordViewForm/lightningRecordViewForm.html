@@ -1,0 +1,26 @@
+<!-- Day 17  -->
+<template>
+    <lightning-card variant="Narrow" title="Lightning Record View Form" icon-name="standard:account">
+        <lightning-record-view-form object-api-name={objectApiName} record-id="0035j00000MKyxnAAD">
+            <div class="slds-grid slds-gutters slds-var-m-around_medium">
+                <div class="slds-col slds-size_6-of-12">
+                    <lightning-output-field field-name="lastname"></lightning-output-field>
+                    <lightning-output-field field-name="Phone"></lightning-output-field>
+                    <lightning-output-field field-name="Email"></lightning-output-field>
+                </div>
+                <div class="slds-col slds-size_6-of-12">
+                    <lightning-output-field field-name="Department"></lightning-output-field>
+                    <lightning-output-field field-name="AccountID"></lightning-output-field>
+                </div>
+
+            </div>
+
+
+        </lightning-record-view-form>
+
+        <p slot="footer">Use the lightning-record-view-form component to create a form that displays Salesforce record
+            data for specified fields associated with that record. The fields are rendered with their labels and current
+            values as read-only.</p>
+    </lightning-card>
+
+</template>

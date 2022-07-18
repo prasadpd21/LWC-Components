@@ -1,0 +1,12 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Create Contact-Imperative Apex Call_D23" icon-name="standard:account">
+         <div class="slds-var-m-around_medium">
+            <lightning-input type="text" variant="standard" name="LastName" label="LastName" onchange={handleChange} required></lightning-input>
+            <lightning-input type="text" variant="standard" name="MobilePhone" label="MobilePhone" onchange={handleChange}></lightning-input>
+            <br>
+            <lightning-button variant="brand" label="Create Contact" onclick={handleClick}></lightning-button>
+
+         </div>
+        <p slot="footer">Card Footer</p>
+    </lightning-card>
+</template>

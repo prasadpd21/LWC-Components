@@ -1,0 +1,31 @@
+<template>
+    <lightning-card variant="Narrow" title="Employees" icon-name="standard:account">
+        <div class="slds-grid slds-var-m-around_medium">
+            <div class="slds-col slds-p-around_medium">
+
+                <template for:each={EmpArray} for:item="Emp">
+                    <div key={Emp.Id}
+                        class=" profileimage1 slds-m-around_xx-small slds-p-around_xx-small slds-grid_align-center slds-size_6-of-12">
+
+                        
+                            <img src={Emp.picture} alt="Employee" style="border-radius: 50%;border: 5px;">
+                            <h1>Name =>{Emp.firstName}</h1>
+                            <h1>Email =>{Emp.email}</h1>
+                        
+                    </div>
+                    
+
+                       
+
+                </template>
+
+            </div>
+
+        </div>
+        <div class="slds-p-around_medium">
+            <br>
+            <lightning-button variant="brand" label="FindEmployees" title="FindEmployees" onclick={handleClick}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

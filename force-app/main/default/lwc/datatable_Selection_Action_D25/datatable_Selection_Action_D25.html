@@ -1,0 +1,33 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card  variant="Narrow"  title="Datatable-1[onrowaction & onrowselection_D25]" icon-name="standard:activation_target">
+        <div class="slds-var-m-around_medium">
+         <lightning-datatable
+            key-field="Id"
+            data={accList}
+            show-row-number-column
+            max-row-selection="3"
+            columns={columnsList}
+            onrowaction={handleRowAction}
+            onrowselection={handleRowSelection}>
+         </lightning-datatable>
+         <br>
+         <br>
+         <lightning-button variant="brand" label="Find Selected Rows" onclick={handleClick} class="slds-var-p-around_medium"></lightning-button>
+         <br>
+         <lightning-button variant="destructive" label="Close" onclick={handleClose} class="slds-var-p-around_medium"></lightning-button>
+         <br>
+         <lightning-button variant="brand" label="Navigate To Home" onclick={handleNavigate} class="slds-var-p-around_medium"></lightning-button>
+         <br>
+         <lightning-button variant="brand" label="Navigate To Account Creation" onclick={handleAccountNavigate} class="slds-var-p-around_medium"></lightning-button>
+
+
+        </div>
+        <p slot="footer">A data table with actions that can be performed on table rows. Use onrowaction to call a handler that defines the actions.Limit of selection is set to 3 using max-row-selection="3" attribute.
+        </p>
+
+
+    </lightning-card>
+   
+</template>

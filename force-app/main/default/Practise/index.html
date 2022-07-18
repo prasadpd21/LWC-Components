@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <h1>Hi Welcome to HTML</h1>
+    <h2>Dont worry HTML is easy to learn</h2>
+    <h3>Just sit tight n focus</h3>
+    <p class="red">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, quae maiores? Dolorum officiis
+        quibusdam
+        nostrum distinctio nesciunt quasi maiores perferendis nemo libero consequatur corporis voluptatibus sunt enim
+        maxime aspernatur vero, amet dolores quae ab possimus! Veniam sunt nihil architecto rerum odio tempore, velit
+        obcaecati! Eaque quo corrupti dignissimos. Rem, at.</p>
+    <hr>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_Blank">HTML</a>
+    <a href="/about.html" target="_Blank">Learn about HTML here!</a><br><br>
+    <img src="https://images.unsplash.com/photo-1644215529308-7877e68eb0b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDd8Q0R3dXdYSkFiRXd8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
+        alt="ETH" style="border: 2px; border-radius: 3mm; " >
+
+    <!-- to add horizontal line use hr tag -->
+    <!-- subscript and superscript -->
+    <p><sup>CO</sup><sub>2</sub></p>
+    <hr>
+    <big>This is big title</big>
+    <small>This is samll title</small>
+    <!-- to retain the spaces and alignment of copied text in html use pre tag -->
+    <pre>
+    integer x = 10;
+    integer y = 20;
+    integer z = 50;
+    
+    string str = (x>y && x>z)?'x is greatest':(y>z)?'y is greatest':'z is greatest';
+    <!-- system.debug(str); -->
+ </pre>
+    <section>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+        <div>
+            <a href="https://www.google.com/" target="_blank">Open Google</a><br>
+            <a href="https://www.facebook.com/" target="_blank">Open Facebook</a><br>
+            <a href="https://www.amazon.com/" target="_blank">Open Amazon</a><br>
+        </div>
+    </section>
+    <hr>
+    <section>
+        <h1>Travel Form for our trip</h1><br>
+        <label for="name">Student Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter Name"><br>
+        <label for="section">Section A</label>
+        <input type="radio" id="section" name="section"><br>
+        <label for="section">Section B</label>
+        <input type="radio" id="section" name="section"><br>
+        <label for="section">Section C</label>
+        <input type="radio" id="section" name="section"><br>
+        <label for="foodcanteen">Want Food Canteen card</label>
+        <input type="checkbox" name="foodcanteen" id="foodcanteen"><br>
+        <textarea name="Explain" id="explain" cols="30" rows="5"
+            placeholder="Explain why u want to join"></textarea><br>
+        <select name="Budget" id="budget">
+            <option value="no-budget">Select your budget</option>
+            <option value="">10k-20k</option>
+            <option value="">30k-50k</option>
+            <option value="">50k-70k</option>
+        </select><br><br>
+        <!-- adding video from YT to our page using iframe -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/4aE58wbXdqU" title="YouTube video player"
+            frameborder="5"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+    </section>
+    <script src="index.js"></script>
+
+</body>
+
+</html>

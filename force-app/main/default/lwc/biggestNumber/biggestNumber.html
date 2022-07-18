@@ -1,0 +1,57 @@
+<template>
+    <lightning-card>
+        <div class="slds-m-around_medium">
+            <!-- biggest No Component -->
+            The biggest No is: {Big} <br>
+            <!-- {Number1} <br> -->
+            <!-- {Number2} <br> -->
+            <!-- {Number3} <br> -->
+
+            <lightning-input type="text" variant="standard" name="Number1" label="Number1" onchange={handleChange}>
+            </lightning-input><br>
+            <lightning-input type="text" variant="standard" name="Number2" label="Number2" onchange={handleChange}>
+            </lightning-input><br>
+            <lightning-input type="text" variant="standard" name="Number3" label="Number3" onchange={handleChange}>
+            </lightning-input><br>
+
+            <lightning-button variant="brand" label="FindBiggest" title="FindBiggest" onclick={handleClick}> <br>
+            </lightning-button> <br>
+
+            <!-- ATM Component -->
+            <h1>ATM</h1> <br>
+            Opening Balance : {OpeningBalance}
+            <lightning-input type="text" variant="standard" name="amount" label="Enter the amount"
+                onchange={inputhandle}></lightning-input>
+            <br>
+            <lightning-button variant="brand" label="Withdraw" title="Withdraw" onclick={amounthandle}>
+            </lightning-button>
+
+            <lightning-button variant="brand" label="Deposit" title="Deposit" onclick={amounthandle}>
+            </lightning-button> <br>
+
+            <!-- Calculator Component -->
+            <div>
+                <h1>Calculator</h1><br>
+                <!-- Result : {} -->
+                <!-- {FirstValue} -->
+                <!-- {SecondValue} -->
+                Result : {Result};
+
+                <lightning-input type="text" variant="standard" name="First Value" label="First Value"
+                    onchange={Valuehandle}></lightning-input><br>
+                <lightning-input type="text" variant="standard" name="Second Value" label="Second Value"
+                    onchange={Valuehandle}></lightning-input><br>
+
+                <lightning-button variant="brand" label="Add" title="Add" onclick={Calculatehandle}></lightning-button>
+                <lightning-button variant="brand" label="Sub" title="Sub" onclick={Calculatehandle}></lightning-button>
+                <lightning-button variant="brand" label="Multiply" title="Multiply" onclick={Calculatehandle}>
+                </lightning-button>
+                <lightning-button variant="brand" label="Divide" title="Divide" onclick={Calculatehandle}>
+                </lightning-button>
+
+            </div>
+
+
+        </div>
+    </lightning-card>
+</template>

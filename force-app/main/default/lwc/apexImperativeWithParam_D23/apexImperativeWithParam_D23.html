@@ -1,0 +1,26 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card  variant="Narrow"  title="Imperative Apex Call with Parameters_D23" icon-name="custom:custom63">
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="search" onchange={handleKeyChange} class="slds-var-m-bottom_small" label="Search"
+                value={searchKey}></lightning-input>
+                <br>
+                <lightning-button variant="brand" label="Get Accounts" onclick={handleClick}></lightning-button>
+            <div class="slds-box">
+                <template if:true={accList}>
+                    <div class="slds-box">
+                        <lightning-datatable
+                         key-field="Id"
+                         show-row-number-column
+                         hide-checkbox-column
+                         data={accList}
+                         columns={columnsList}>
+                        </lightning-datatable>
+                     </div>
+                </template>
+
+            </div>
+        </div>
+        <p slot="footer">To control when the method invocation occurs (for example, in response to clicking a button), call the method imperatively. When you call a method imperatively, you receive only a single response.</p>
+    </lightning-card>
+</template>
