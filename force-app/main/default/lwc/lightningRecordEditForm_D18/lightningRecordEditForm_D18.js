@@ -34,6 +34,10 @@ export default class LightningRecordEditForm_D18 extends LightningElement {
             this.template.querySelector("lightning-record-edit-form").submit(fields);
         }
 
+        Array.from(this.template.querySelectorAll('lightning-input-field')).forEach(currentItem => {
+            currentItem.value = '';
+        });
+
 
     }
 

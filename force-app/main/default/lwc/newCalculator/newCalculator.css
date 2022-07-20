@@ -2,9 +2,10 @@
 /* custom property */
 
 :host{
-    --slds-c-button-brand-color-background:#ae2cae;
+    --slds-c-button-brand-color-background:#ff8113;
     --my-padding:15px;
     --my-margin:10px;
+    --my-border:5rem;
     
 
 }
